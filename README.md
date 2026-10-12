@@ -6,5 +6,7 @@ Served via jsDelivr: `https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@<
 - `description/` — 1200px-wide JPG sections, in page order
 - `codecanyon-description.html` — paste-ready item description (images + alt text)
 - `index.html` — local preview of the description
+- `marketplace/` — extra images for the WRTeam Marketplace page (price/CTA slides, title-cropped feature images)
+- `marketplace-description.html` — WRTeam Marketplace description (TinyMCE, with styles)
 
 © WRTeam. Not licensed for reuse.
