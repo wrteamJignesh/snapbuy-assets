@@ -106,7 +106,8 @@
     margin-top: clamp(18px, 2.5vw, 25px);
   }
   .wr-demo-panels__link {
-    width: calc(50% - 10px);
+    flex: 1 1 0;
+    min-width: 0;
     min-height: 58px;
     padding: clamp(12px, 1.5vw, 16px) clamp(14px, 2vw, 20px);
     display: flex;
@@ -625,6 +626,7 @@
     }
     .wr-demo-qr-card__image { border-radius: 8px; }
     .wr-demo-panels__link {
+      flex: 0 0 100%;
       width: 100%;
       min-height: 52px;
     }
@@ -840,7 +842,7 @@
 <div class="wr-demo-qr-card"><a href="https://testflight.apple.com/join/3Yzf2G42" target="_blank" rel="noopener" class="wr-demo-qr-card__link"><img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.1.1/marketplace/qr-customer-ios.png" alt="Customer iOS Demo QR" class="wr-demo-qr-card__image" width="462" height="603"></a></div>
 <div class="wr-demo-qr-card"><a href="https://testflight.apple.com/join/FbtpabqE" target="_blank" rel="noopener" class="wr-demo-qr-card__link"><img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.1.1/marketplace/qr-delivery-boy-ios.png" alt="Rider iOS Demo QR" class="wr-demo-qr-card__image" width="462" height="603"></a></div>
 </div>
-<div class="wr-demo-panels"><a href="https://snapbuy.wrteam.me/" target="_blank" rel="noopener" class="wr-demo-panels__link">Website ↗</a> <a href="https://admin-snapbuy.wrteam.me/login" target="_blank" rel="noopener" class="wr-demo-panels__link">Admin Panel ↗</a></div>
+<div class="wr-demo-panels"><a href="https://snapbuy.wrteam.me/" target="_blank" rel="noopener" class="wr-demo-panels__link">Website ↗</a> <a href="https://admin-snapbuy.wrteam.me/login" target="_blank" rel="noopener" class="wr-demo-panels__link">Admin Panel ↗</a> <a href="https://admin-snapbuy.wrteam.me/store/login" target="_blank" rel="noopener" class="wr-demo-panels__link">Store Panel ↗</a></div>
 </section>
 <!-- ============ SECTION 3: DEMO CREDENTIALS ================ -->
 <section class="wr-section">
