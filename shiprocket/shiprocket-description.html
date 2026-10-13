@@ -1,0 +1,943 @@
+<style>
+  /* ========================================================= */
+  /* WRTEAM PRODUCT DESCRIPTION TEMPLATE - MASTER STYLES        */
+  /* Layout: HEADER (1-5), MAIN BODY (presentation), FOOTER     */
+  /* Breakpoints: 960 / 768 / 720 / 600 / 360 px                */
+  /* ========================================================= */
+
+  /* ========================================================= */
+  /* ==================== GLOBAL BASE ======================== */
+  /* ========================================================= */
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #1a1d24;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* Shared section wrapper */
+  .wr-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px) clamp(12px, 2vw, 24px);
+    background: #fff;
+  }
+
+  /* ######################################################### */
+  /* ###################### HEADER ########################### */
+  /* ############ (Sections 1 to 5) ########################## */
+  /* ######################################################### */
+
+  /* ========================================================= */
+  /* ============== SECTION 1: INTRO TEXT ==================== */
+  /* ========================================================= */
+  .wr-intro {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px) clamp(12px, 2vw, 24px);
+    background: #fff;
+  }
+  .wr-intro h2 {
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0 0 clamp(12px, 1.5vw, 16px);
+    color: #1a1d24;
+  }
+  .wr-intro p {
+    font-size: clamp(14px, 1.6vw, 16px);
+    line-height: 1.6;
+    color: #6b7280;
+    margin: 0 0 clamp(12px, 1.5vw, 16px);
+  }
+  .wr-intro p:last-child { margin: 0; }
+
+  /* ========================================================= */
+  /* ============== SECTION 2: DEMO APPS ===================== */
+  /* ========================================================= */
+  .wr-demo-title {
+    margin: 0 0 clamp(18px, 2.5vw, 25px);
+    text-align: left;
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1a1d24;
+  }
+  .wr-demo-qr-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 1.5vw, 20px);
+  }
+  .wr-demo-qr-card {
+    width: calc(25% - 15px);
+    padding: 4px;
+    background: #fbfcfe;
+    border: 1px solid #e2e6ed;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(20, 30, 50, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+  }
+  .wr-demo-qr-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(20, 30, 50, 0.08);
+  }
+  .wr-demo-qr-card__link {
+    display: block;
+    text-decoration: none;
+    outline: none;
+  }
+  .wr-demo-qr-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 462 / 603;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .wr-demo-panels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 1.5vw, 20px);
+    margin-top: clamp(18px, 2.5vw, 25px);
+  }
+  .wr-demo-panels__link {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 58px;
+    padding: clamp(12px, 1.5vw, 16px) clamp(14px, 2vw, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background: #f3f4f6;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    color: #1a1d24;
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .wr-demo-panels__link:hover {
+    background: #1862ff;
+    border-color: #1862ff;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .wr-demo-panels__link:active { background: #1455d9; }
+
+  /* ========================================================= */
+  /* ============ SECTION 3: DEMO CREDENTIALS ================ */
+  /* ========================================================= */
+  .wr-cred-header { text-align: left; margin-bottom: clamp(20px, 2.5vw, 32px); }
+  .wr-cred-title {
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    color: #1a1d24;
+  }
+  .wr-cred-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .wr-cred-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(14px, 1.8vw, 20px);
+  }
+  .wr-cred-card {
+    border-radius: 14px;
+    padding: clamp(18px, 2.2vw, 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .wr-cred-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(17, 17, 26, 0.1);
+  }
+  .wr-cred-card--dark {
+    background-color: #131c2e;
+    border: 1px solid #131c2e;
+  }
+  .wr-cred-card--dark .wr-cred-card-header { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .wr-cred-card--dark .wr-cred-card-title { color: #fbbf24; }
+  .wr-cred-card--dark .wr-cred-arrow,
+  .wr-cred-card--dark .wr-cred-label { color: #9ca3af; }
+  .wr-cred-card--dark .wr-cred-value { color: #ffffff; }
+
+  .wr-cred-card--light {
+    background-color: #f8f9fa;
+    border: 1px solid #e5e7eb;
+  }
+  .wr-cred-card--light .wr-cred-card-header { border-bottom: 1px solid #e5e7eb; }
+  .wr-cred-card--light .wr-cred-card-title { color: #1a1d24; }
+  .wr-cred-card--light .wr-cred-arrow { color: #9ca3af; }
+  .wr-cred-card--light .wr-cred-label { color: #6b7280; }
+  .wr-cred-card--light .wr-cred-value { color: #111827; }
+
+  .wr-cred-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: clamp(12px, 1.5vw, 16px);
+  }
+  .wr-cred-card-title {
+    font-size: clamp(16px, 1.8vw, 18px);
+    font-weight: 600;
+    margin: 0;
+  }
+  .wr-cred-arrow {
+    font-size: clamp(16px, 1.8vw, 18px);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .wr-cred-arrow:hover { color: #4f46e5 !important; }
+  .wr-cred-field { margin-bottom: clamp(12px, 1.5vw, 16px); }
+  .wr-cred-field:last-child { margin-bottom: 0; }
+  .wr-cred-label { font-size: clamp(12px, 1.3vw, 13px); margin-bottom: 4px; }
+  .wr-cred-value {
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 500;
+    word-break: break-all;
+  }
+
+  /* ========================================================= */
+  /* ============== SECTION 4: TECH STACK ==================== */
+  /* ========================================================= */
+  .wr-tech-header { text-align: left; margin-bottom: clamp(20px, 2.5vw, 32px); }
+  .wr-tech-title {
+    font-size: clamp(20px, 2.8vw, 28px);
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #1a1d24;
+  }
+  .wr-tech-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  /* Auto-fit grid so 1 card takes full width, 2 cards split evenly */
+  .wr-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: clamp(16px, 2vw, 24px);
+  }
+  .wr-tech-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: clamp(18px, 2.2vw, 24px);
+  }
+  .wr-tech-card-title {
+    font-size: clamp(12px, 1.3vw, 13px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin: 0 0 clamp(14px, 1.8vw, 20px);
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .wr-tech-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .wr-tech-pill {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: clamp(13px, 1.4vw, 14px);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .wr-tech-pill--flutter  { border: 1px solid #3b82f6; color: #3b82f6; background: #fff; }
+  .wr-tech-pill--laravel  { border: 1px solid #ef4444; color: #ef4444; background: #fff; }
+  .wr-tech-pill--dart     { border: 1px solid #10b981; color: #10b981; background: #fff; }
+  .wr-tech-pill--mysql    { border: 1px solid #8b5cf6; color: #8b5cf6; background: #fff; }
+  .wr-tech-pill--firebase { border: 1px solid #f59e0b; color: #f59e0b; background: #fff; }
+  .wr-tech-pill--web      { border: 1px solid #ec4899; color: #ec4899; background: #fff; }
+  .wr-tech-pill--socket   { background: #e0e7ff; color: #4338ca; }
+  .wr-tech-pill--next     { background: #f3e8ff; color: #7e22ce; }
+  .wr-tech-pill--fcm      { background: #f3e8ff; color: #7e22ce; }
+  .wr-tech-pill--smtp     { background: #fef3c7; color: #d97706; }
+  .wr-tech-pill--sms      { background: #e0f2fe; color: #0369a1; }
+  .wr-tech-pill--gemini   { background: #fee2e2; color: #dc2626; }
+
+  /* ========================================================= */
+  /* ============== SECTION 5: WHY CHOOSE ==================== */
+  /* ========================================================= */
+  .wr-why-header { text-align: left; margin-bottom: clamp(20px, 2.5vw, 32px); }
+  .wr-why-title {
+    font-size: clamp(20px, 2.8vw, 28px);
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #1a1d24;
+  }
+  .wr-why-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  .wr-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(14px, 1.8vw, 20px);
+  }
+  .wr-why-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: clamp(18px, 2.2vw, 24px);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .wr-why-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(17, 17, 26, 0.08);
+  }
+  .wr-why-card-title {
+    font-size: clamp(16px, 1.8vw, 18px);
+    font-weight: 700;
+    margin: 0 0 12px;
+    line-height: 1.3;
+    color: #1a1d24;
+  }
+  .wr-why-card-text {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ######################################################### */
+  /* ################## MAIN BODY ############################ */
+  /* ########## (Presentation section) ####################### */
+  /* ######################################################### */
+
+  /* ========================================================= */
+  /* ============== SECTION 7: FEATURES GALLERY ============== */
+  /* ============== (Presentation section)      ============== */
+  /* ========================================================= */
+  .wr-gallery {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 2vw, 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 0;   /* images flow seamlessly, no separation */
+  }
+  .wr-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .wr-gallery a {
+    display: block;
+    text-decoration: none;
+  }
+
+  /* ######################################################### */
+  /* ###################### FOOTER ########################### */
+  /* ######################################################### */
+
+  /* ========================================================= */
+  /* ============== SECTION 6: REVENUE ======================= */
+  /* (Final template: no background, stacked cards)            */
+  /* ========================================================= */
+  .wr-revenue-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px) clamp(12px, 2vw, 24px);
+    background: #fff;
+  }
+  .wr-revenue-header { text-align: left; margin-bottom: clamp(20px, 2.5vw, 32px); }
+  .wr-revenue-title {
+    font-size: clamp(20px, 2.8vw, 28px);
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #1a1d24;
+  }
+  .wr-revenue-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  .wr-revenue-grid {
+    display: grid;
+    grid-template-columns: 1fr;   /* one card per row, stacked */
+    gap: clamp(12px, 1.8vw, 16px);
+  }
+  .wr-revenue-card {
+    background-color: #ffffff;
+    border: 1px solid #dfe4f5;
+    border-radius: 10px;
+    padding: clamp(16px, 2.2vw, 20px);
+  }
+  .wr-revenue-card-title {
+    font-size: clamp(15px, 1.6vw, 16px);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+    color: #2e2a6b;
+  }
+  .wr-revenue-card-divider {
+    border: 0;
+    border-top: 1px solid #e3e7f5;
+    margin: clamp(10px, 1.5vw, 14px) 0;
+  }
+  .wr-revenue-card-text {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #4f46e5;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ========================================================= */
+  /* ============== SECTION 8: LICENSE TABLE ================= */
+  /* (Final template: table on desktop, cards on mobile)       */
+  /* ========================================================= */
+  .wr-license-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px) clamp(12px, 2vw, 24px);
+  }
+  .wr-license-header { text-align: left; margin-bottom: clamp(20px, 3vw, 32px); }
+  .wr-license-title {
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 8px;
+    color: #1a1d24;
+  }
+  .wr-license-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .wr-license-table-wrapper {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    overflow: hidden;
+  }
+  .wr-license-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+  }
+  .wr-license-table th,
+  .wr-license-table td {
+    padding: 16px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+  }
+  .wr-license-table thead th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #1a1d24;
+  }
+  .wr-license-table th:first-child,
+  .wr-license-table td:first-child { width: 52%; text-align: left; }
+  .wr-license-table th:not(:first-child),
+  .wr-license-table td:not(:first-child) { width: 24%; text-align: center; }
+
+  .wr-license-table tbody tr:nth-child(even) { background: #f8fafc; }
+  .wr-license-table tbody tr:last-child td { border-bottom: none; }
+  .wr-license-table td:first-child { color: #4b5563; }
+
+  .wr-icon-check,
+  .wr-icon-cross {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .wr-icon-check { color: #16a34a; background: #dcfce7; }
+  .wr-icon-cross { color: #dc2626; background: #fee2e2; }
+
+  /* Visually hidden, still read by screen readers */
+  .wr-sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  .wr-license-note {
+    font-size: clamp(13px, 1.4vw, 14px);
+    color: #6b7280;
+    margin: 16px 0 0;
+    line-height: 1.5;
+  }
+
+  /* ========================================================= */
+  /* ============== SECTION 9: CASE STUDIES ================== */
+  /* ========================================================= */
+  .wr-case-studies {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px) clamp(12px, 2vw, 24px);
+    border-top: 1px solid #e5e7eb;
+  }
+  .wr-case-studies-title {
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 8px;
+    color: #1a1d24;
+  }
+  .wr-case-studies-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #6b7280;
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+  .wr-case-study-item {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #1a1d24;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .wr-case-study-item a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .wr-case-study-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* ========================================================= */
+  /* ============== SECTION 10: EXTENDED LICENSE BANNER ====== */
+  /* ========================================================= */
+  .wr-banner-section {
+    background: #2563eb;
+    padding: clamp(32px, 5vw, 64px) clamp(16px, 3vw, 32px);
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto clamp(24px, 4vw, 48px);
+    border-radius: 16px;
+  }
+  .wr-banner-badge {
+    display: inline-block;
+    background: #1e40af;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: clamp(11px, 1.2vw, 12px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: clamp(12px, 2vw, 16px);
+  }
+  .wr-banner-title {
+    font-size: clamp(22px, 3.2vw, 32px);
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0 0 12px;
+    line-height: 1.3;
+  }
+  .wr-banner-subtitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: #bfdbfe;
+    max-width: 600px;
+    margin: 0 auto clamp(24px, 3vw, 32px);
+    line-height: 1.6;
+  }
+  .wr-banner-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .wr-banner-pill {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: clamp(13px, 1.4vw, 14px);
+    font-weight: 500;
+  }
+  .wr-banner-pill-icon { color: #ffffff; font-weight: bold; }
+
+  /* ========================================================= */
+  /* ==================== RESPONSIVE ========================= */
+  /* ========================================================= */
+  @media (max-width: 960px) {
+    .wr-demo-qr-card { width: calc(50% - 8px); }
+    .wr-cred-grid { grid-template-columns: repeat(2, 1fr); }
+    .wr-why-grid { grid-template-columns: repeat(2, 1fr); }
+    .wr-banner-section { border-radius: 12px; margin-left: 12px; margin-right: 12px; }
+  }
+  @media (max-width: 768px) {
+    /* License table: slightly tighter on tablets */
+    .wr-license-table th,
+    .wr-license-table td { padding: 14px 14px; font-size: 14px; }
+    .wr-license-table th:first-child,
+    .wr-license-table td:first-child { width: 46%; }
+    .wr-license-table th:not(:first-child),
+    .wr-license-table td:not(:first-child) { width: 27%; }
+  }
+  @media (max-width: 720px) {
+    /* Force 1 column on mobile for tech stack */
+    .wr-tech-grid { grid-template-columns: 1fr; }
+    .wr-banner-section { margin-left: 0; margin-right: 0; border-radius: 12px; }
+  }
+  @media (max-width: 600px) {
+    .wr-section, .wr-intro, .wr-license-section, .wr-case-studies, .wr-gallery, .wr-revenue-section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .wr-demo-qr-card {
+      width: calc(50% - 5px);
+      border-radius: 14px;
+    }
+    .wr-demo-qr-card__image { border-radius: 8px; }
+    .wr-demo-panels__link {
+      flex: 0 0 100%;
+      width: 100%;
+      min-height: 52px;
+    }
+    .wr-cred-grid { grid-template-columns: 1fr; }
+    .wr-why-grid { grid-template-columns: 1fr; }
+    .wr-banner-pills { flex-direction: column; align-items: center; }
+
+    /* ===== MOBILE LICENSE TABLE: compact responsive table =====
+       Stays a real table on phones (Feature | Regular | Extended).
+       Prefixed selectors + !important so the marketplace's own
+       table styles (nowrap, min-width, font-size) can't break it. */
+    .wr-license-section .wr-license-table-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+      border: 1px solid #e5e7eb !important;
+      border-radius: 12px !important;
+      background: #fff !important;
+    }
+    .wr-license-section .wr-license-table {
+      display: table !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      table-layout: fixed !important;
+      border-collapse: collapse !important;
+      margin: 0 !important;
+    }
+    .wr-license-section .wr-license-table th,
+    .wr-license-section .wr-license-table td {
+      padding: 12px 8px !important;
+      font-size: 13px !important;
+      line-height: 1.4 !important;
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-break: normal !important;
+      vertical-align: middle !important;
+    }
+    .wr-license-section .wr-license-table th { font-size: 12px !important; font-weight: 600 !important; }
+    /* Column widths: feature gets more room, ticks stay compact */
+    .wr-license-section .wr-license-table th:first-child,
+    .wr-license-section .wr-license-table td:first-child {
+      width: 50% !important;
+      padding-left: 12px !important;
+      text-align: left !important;
+    }
+    .wr-license-section .wr-license-table th:not(:first-child),
+    .wr-license-section .wr-license-table td:not(:first-child) {
+      width: 25% !important;
+      text-align: center !important;
+    }
+    .wr-license-section .wr-icon-check,
+    .wr-license-section .wr-icon-cross {
+      width: 24px !important; height: 24px !important;
+      font-size: 12px !important;
+    }
+  }
+  @media (max-width: 360px) {
+    /* Very small phones: a little tighter */
+    .wr-license-section .wr-license-table th,
+    .wr-license-section .wr-license-table td { padding: 10px 6px !important; font-size: 12px !important; }
+    .wr-license-section .wr-license-table th { font-size: 11px !important; }
+    .wr-license-section .wr-license-table th:first-child,
+    .wr-license-section .wr-license-table td:first-child { width: 46% !important; padding-left: 10px !important; }
+    .wr-license-section .wr-license-table th:not(:first-child),
+    .wr-license-section .wr-license-table td:not(:first-child) { width: 27% !important; }
+    .wr-license-section .wr-icon-check,
+    .wr-license-section .wr-icon-cross { width: 22px !important; height: 22px !important; }
+  }
+
+  /* ========================================================= */
+  /* ====== FOOTER HOVER (revenue, license, banner)         ==== */
+  /* Same hover as header cards (sections 1-5):             */
+  /* lift 3px + soft shadow, 0.15s ease                      */
+  /* ========================================================= */
+  .wr-revenue-card,
+  .wr-license-table-wrapper,
+  .wr-license-table tbody tr,
+  .wr-banner-section {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .wr-revenue-card:hover,
+  .wr-license-table-wrapper:hover,
+  .wr-banner-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(17, 17, 26, 0.08);
+  }
+  .wr-banner-section:hover { box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25); }
+  @media (max-width: 600px) {
+    /* On mobile: no lift on the table (it's a full-width block) */
+    .wr-license-section .wr-license-table-wrapper:hover { transform: none; box-shadow: none; }
+  }
+
+  /* ========================================================= */
+  /* ====== PRESENTATION FEATURE BLOCKS (inside .wr-gallery) == */
+  /* Title + text + screenshot, one block per feature          */
+  /* ========================================================= */
+  .wr-feature {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1.2vw, 12px);
+    margin: clamp(24px, 3vw, 40px) 0 0;
+  }
+  .wr-feature-title {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: #1a1d24;
+  }
+  .wr-feature-text {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  .wr-feature img { margin-top: 4px; }
+
+  /* ========================================================= */
+  /* ====== ROUNDED CORNERS LOCK                           ==== */
+  /* The marketplace resets border-radius on some elements,   */
+  /* so corners are locked with !important.                   */
+  /* ========================================================= */
+  .wr-banner-section { border-radius: 16px !important; overflow: hidden; }
+  .wr-revenue-card { border-radius: 10px !important; }
+  .wr-why-card, .wr-tech-card { border-radius: 12px !important; }
+  .wr-cred-card { border-radius: 14px !important; }
+  @media (max-width: 960px) {
+    .wr-banner-section { border-radius: 12px !important; }
+  }
+
+  /* ========================================================= */
+  /* ====== EXTRA OPTIONS                                  ==== */
+  /* ========================================================= */
+  /* Credentials: use with 2 cards so they fill the row */
+  .wr-cred-grid--2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) { .wr-cred-grid--2 { grid-template-columns: 1fr; } }
+  /* Extra tech pill colours */
+  .wr-tech-pill--orange      { border: 1px solid #f97316; color: #ea580c; background: #fff; }
+  .wr-tech-pill--orange-fill { background: #ffedd5; color: #c2410c; }
+  /* Intro video (16:9, responsive on every screen size) */
+  .wr-intro .wr-video {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 0 !important;
+    padding: 0 0 56.25% 0 !important;
+    margin: 0 0 clamp(16px, 2vw, 24px) !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000;
+  }
+  .wr-intro .wr-video iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+  }
+  @media (max-width: 600px) {
+    .wr-intro .wr-video { border-radius: 10px !important; }
+  }
+
+  /* Presentation: every image on its own full-width line */
+  .wr-gallery { display: block !important; }
+  .wr-gallery > img,
+  .wr-gallery > a,
+  .wr-gallery > a > img,
+  .wr-gallery p,
+  .wr-gallery p img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  /* Feature blocks: images (and linked images) always full width */
+  .wr-gallery .wr-feature > img,
+  .wr-gallery .wr-feature > a,
+  .wr-gallery .wr-feature > a > img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+</style>
+
+<!-- ######################## HEADER ######################## -->
+<p></p>
+<!-- ============== SECTION 1: INTRO TEXT ==================== -->
+<section class="wr-intro">
+<h2>Shiprocket Add-on for SnapBuy - Courier Shipping for eCommerce Orders</h2>
+<p>The Shiprocket add-on connects your SnapBuy store to Shiprocket's courier network, so every eCommerce order can be priced, shipped and tracked without leaving your admin panel.</p>
+<p>Customers see live delivery charges and pincode availability before they buy. Your team books shipments with one click, prints labels and manifests in bulk, and lets tracking update orders automatically, from the first scan to the doorstep.</p>
+<p>It is an add-on for SnapBuy 1.4.0 or later, built for stores shipping within India. Quick Commerce keeps running on your own delivery boys, while Shiprocket takes eCommerce orders nationwide.</p>
+</section>
+<!-- ============== SECTION 4: TECH STACK ==================== -->
+<section class="wr-section">
+<div class="wr-tech-header">
+<h2 class="wr-tech-title">What You Need</h2>
+<p class="wr-tech-subtitle">The Shiprocket add-on extends an existing SnapBuy installation and is sold separately on the WRTeam Marketplace.</p>
+</div>
+<div class="wr-tech-grid">
+<div class="wr-tech-card">
+<h3 class="wr-tech-card-title">Requirements</h3>
+<div class="wr-tech-pills"><span class="wr-tech-pill wr-tech-pill--laravel">SnapBuy 1.4.0+</span> <span class="wr-tech-pill wr-tech-pill--web">Shiprocket Account &amp; API User</span> <span class="wr-tech-pill wr-tech-pill--orange">Stores in India</span> <span class="wr-tech-pill wr-tech-pill--flutter">HTTPS for Webhooks</span></div>
+</div>
+<div class="wr-tech-card">
+<h3 class="wr-tech-card-title">Works Across</h3>
+<div class="wr-tech-pills"><span class="wr-tech-pill wr-tech-pill--laravel">Admin Panel</span> <span class="wr-tech-pill wr-tech-pill--dart">Next.js Website</span> <span class="wr-tech-pill wr-tech-pill--flutter">Flutter Customer App</span> <span class="wr-tech-pill wr-tech-pill--web">Store Pickup Addresses</span></div>
+</div>
+</div>
+</section>
+<!-- ============== SECTION 5: WHY CHOOSE ==================== -->
+<section class="wr-section">
+<div class="wr-why-header">
+<h2 class="wr-why-title">Why Add Shiprocket to SnapBuy?</h2>
+<p class="wr-why-subtitle">Turn eCommerce shipping into a few clicks: live rates at checkout, one-click shipments and tracking that keeps every order up to date.</p>
+</div>
+<div class="wr-why-grid">
+<div class="wr-why-card">
+<h3 class="wr-why-card-title">Live Courier Rates at Checkout</h3>
+<p class="wr-why-card-text">Charge customers what delivery really costs. SnapBuy asks Shiprocket for live rates on every eCommerce checkout and adds your markup, rounding and minimum charge.</p>
+</div>
+<div class="wr-why-card">
+<h3 class="wr-why-card-title">One-Click Shipments</h3>
+<p class="wr-why-card-text">Book items with Shiprocket straight from the order. Compare couriers by price, delivery time and rating, then create the shipment in one click.</p>
+</div>
+<div class="wr-why-card">
+<h3 class="wr-why-card-title">Automatic Waybills &amp; Pickups</h3>
+<p class="wr-why-card-text">The AWB is assigned the moment a shipment is created, and courier pickups can be requested automatically or with one click.</p>
+</div>
+<div class="wr-why-card">
+<h3 class="wr-why-card-title">A Shipments Desk for Dispatch</h3>
+<p class="wr-why-card-text">Every parcel sorted by stage, with bulk labels, manifests, delivery receipts and pickups for the whole day&#x27;s dispatch.</p>
+</div>
+<div class="wr-why-card">
+<h3 class="wr-why-card-title">Tracking That Updates Itself</h3>
+<p class="wr-why-card-text">Shiprocket webhooks and a 30-minute sync move order items to Shipped, Out for Delivery and Delivered, while customers get a Track Shipment link.</p>
+</div>
+<div class="wr-why-card">
+<h3 class="wr-why-card-title">Failed Deliveries &amp; Returns Handled</h3>
+<p class="wr-why-card-text">Re-attempt or return failed deliveries, book return pickups and settle parcels the courier brings back, all from SnapBuy.</p>
+</div>
+</div>
+</section>
+<!-- ###################### MAIN BODY ####################### -->
+<p></p>
+<!-- ============== PRESENTATION SECTION ===================== -->
+<section class="wr-gallery"><img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/S01-hero.jpg" alt="SnapBuy Shiprocket add-on: ship every eCommerce order with Shiprocket">
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/S02-without-vs-with.jpg" alt="Shipping without and with the SnapBuy Shiprocket add-on">
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/S03-how-it-works.jpg" alt="How the Shiprocket add-on works, from checkout to doorstep in six steps">
+<div class="wr-feature">
+<h3 class="wr-feature-title">Install, Connect and Start Shipping</h3>
+<p class="wr-feature-text">Install the add-on from the Plugins page, enter your Shiprocket API user, add a webhook token and choose whether waybills and pickups run automatically. Test everything in Sandbox mode before you switch to Live.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F04-install-and-connect.jpg" alt="Shiprocket add-on settings in the SnapBuy admin panel"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Delivery Charges from Real Courier Rates</h3>
+<p class="wr-feature-text">Set any eCommerce zone to live courier rates and checkout prices delivery from Shiprocket&#x27;s real rates for the parcel. Add a percentage or fixed markup, round up and set a minimum charge, while your free-delivery threshold still applies.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F05-live-delivery-charges.jpg" alt="SnapBuy zone delivery pricing using live Shiprocket courier rates"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Pincode Check on Product Pages</h3>
+<p class="wr-feature-text">Shoppers, even guests, check delivery to their pincode before adding to cart. The website shows the courier&#x27;s estimated delivery date, and unserviceable pincodes are flagged before checkout.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F06-pincode-check.jpg" alt="Pincode delivery check on the SnapBuy app and website product page"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Every Store Becomes a Pickup Address</h3>
+<p class="wr-feature-text">Check whether couriers collect from a store&#x27;s pincode and register the store with Shiprocket from the store form. Each store ships from its own address, so multi-store businesses work out of the box.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F07-store-pickup.jpg" alt="Register a SnapBuy store as a Shiprocket pickup address"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Ship with Shiprocket, Right from the Order</h3>
+<p class="wr-feature-text">Pick the items, check the parcel&#x27;s weight and volumetric weight, compare live courier rates with ETA, rating and COD support, and create the shipment without leaving the order.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F08-ship-from-order.jpg" alt="Ship with Shiprocket dialog with live courier rates in SnapBuy"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">One Shipments Desk for Every Parcel</h3>
+<p class="wr-feature-text">A dedicated Shipments page groups parcels into To Dispatch, Awaiting Waybill, Ready to Ship, In Transit, Delivered and Needs Attention, with bulk printing, pickups and tracking refresh.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F09-shipments-desk.jpg" alt="SnapBuy Shipments page with bulk labels, manifests and pickups"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Tracking That Updates Orders by Itself</h3>
+<p class="wr-feature-text">Every courier scan reaches SnapBuy through a webhook or the scheduled sync. Order items move forward on their own, customers get a Track Shipment link, and you choose when they&#x27;re notified.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F10-tracking-sync.jpg" alt="Automatic Shiprocket tracking sync and customer tracking details in SnapBuy"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Failed Deliveries and Returns, Handled</h3>
+<p class="wr-feature-text">When a delivery attempt fails, choose Try Delivery Again or Return to Origin. Accepted returns can be picked up with Shiprocket, and parcels that come back are settled your way.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F11-failed-deliveries-returns.jpg" alt="Failed delivery actions and return pickups with Shiprocket in SnapBuy"></div>
+<div class="wr-feature">
+<h3 class="wr-feature-title">Your Riders for Minutes, Shiprocket for Nationwide</h3>
+<p class="wr-feature-text">Quick Commerce keeps using your own delivery boys. For eCommerce, each zone chooses Shiprocket, delivery boys or manual tracking, with prepaid and cash on delivery both supported.</p>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/F12-riders-and-couriers.jpg" alt="SnapBuy zone delivery methods: Shiprocket, delivery boy or manual tracking"></div>
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/S13-everything-in-the-addon.jpg" alt="Everything included in the SnapBuy Shiprocket add-on">
+<img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/S14-what-you-need.jpg" alt="Requirements for the SnapBuy Shiprocket add-on">
+<a href="https://marketplace.wrteam.in/products/shiprocket-snapbuy-add-on" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/wrteamJignesh/snapbuy-assets@v1.3.0/shiprocket/S15-get-the-addon.jpg" alt="Get the Shiprocket add-on for SnapBuy on the WRTeam Marketplace"></a></section>
+<!-- ######################## FOOTER ######################## -->
+<p></p>
+<!-- ============== EXTENDED LICENSE BANNER ================== -->
+<section class="wr-banner-section"><span class="wr-banner-badge">★ Add-on for SnapBuy 1.4.0+</span>
+<h2 class="wr-banner-title">Add Shiprocket Shipping to Your SnapBuy Store</h2>
+<p class="wr-banner-subtitle">Live courier rates at checkout, one-click shipments and tracking that updates itself. <a href="https://marketplace.wrteam.in/docs/snapbuy/docs/admin/shiprocket-addon" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;font-weight:600;">Read the setup guide</a> · Need SnapBuy? <a href="https://www.marketplace.wrteam.in/products/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;font-weight:600;">Get SnapBuy</a></p>
+<div class="wr-banner-pills">
+<div class="wr-banner-pill"><span class="wr-banner-pill-icon">✓</span> Live Courier Rates</div>
+<div class="wr-banner-pill"><span class="wr-banner-pill-icon">✓</span> Automatic Tracking</div>
+<div class="wr-banner-pill"><span class="wr-banner-pill-icon">✓</span> Bulk Labels &amp; Manifests</div>
+</div>
+</section>
