@@ -1,4 +1,5 @@
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap");
   /* ========================================================= */
   /* WRTEAM PRODUCT DESCRIPTION TEMPLATE - MASTER STYLES        */
   /* Layout: HEADER (1-5), MAIN BODY (presentation), FOOTER     */
@@ -838,29 +839,40 @@
   .wr-gallery .wr-img-row .wr-fcta-wa   { width: 24.5833% !important; }
   .wr-gallery .wr-img-row .wr-fcta-info { width: 38.6667% !important; }
   /* ========================================================= */
-  /* ====== PRESENTATION SECTION HEADINGS (inside .wr-gallery) */
-  /* Title + subtitle as text above each section image         */
+  /* ====== PRESENTATION SECTION CARDS (inside .wr-gallery) == */
+  /* Title + subtitle as text on the section's card colour,    */
+  /* the section image continues the same card below it        */
   /* ========================================================= */
+  .wr-gallery .wr-sec-card {
+    container-type: inline-size;
+    margin: clamp(28px, 4vw, 48px) 0 0 !important;
+  }
   .wr-gallery .wr-sec-head {
+    background: var(--bg, #fff);
+    border: var(--bd, 0);
+    border-bottom: 0;
+    border-radius: 24px 24px 0 0 !important;
+    border-radius: calc(var(--r) * 1cqw) calc(var(--r) * 1cqw) 0 0 !important;
+    padding: clamp(28px, 5.2cqw, 52px) 6% 0;
     text-align: center;
-    margin: clamp(40px, 5vw, 64px) auto clamp(16px, 2vw, 24px);
-    max-width: 800px;
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   .wr-gallery .wr-sec-eyebrow {
     display: inline-block;
-    margin: 0 0 12px;
-    padding: 6px 14px;
+    margin: 0 0 clamp(10px, 1.6cqw, 16px);
+    padding: 0.5em 1.1em;
     border-radius: 999px !important;
-    background: #e7f5e9;
-    color: #0e9623;
-    font-size: 12px;
-    font-weight: 700;
+    background: #0e9623;
+    color: #fff;
+    font-size: clamp(10px, 1.45cqw, 14px);
+    font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
   .wr-gallery .wr-sec-title {
-    font-size: clamp(24px, 3.4vw, 36px);
-    font-weight: 800;
+    font-family: inherit;
+    font-size: clamp(22px, 5.2cqw, 48px);
+    font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;
     margin: 0;
@@ -868,10 +880,23 @@
   }
   .wr-gallery .wr-sec-title span { color: #0e9623; }
   .wr-gallery .wr-sec-text {
-    margin: clamp(8px, 1.2vw, 12px) 0 0;
-    font-size: clamp(15px, 1.7vw, 17px);
-    line-height: 1.6;
-    color: #5b6b62;
+    max-width: 82%;
+    margin: clamp(8px, 1.5cqw, 14px) auto 0;
+    font-size: clamp(14px, 2.5cqw, 22px);
+    line-height: 1.45;
+    color: #3d4a43;
+  }
+  .wr-gallery .wr-sec-card img,
+  .wr-gallery .wr-sec-card a {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  @media (max-width: 600px) {
+    .wr-gallery .wr-sec-head { padding: 22px 5% 0; }
+    .wr-gallery .wr-sec-text { max-width: 100%; }
   }
 </style>
 <!-- ######################## HEADER ######################## -->
@@ -879,8 +904,8 @@
 <!-- ============== SECTION 1: INTRO TEXT ==================== -->
 <section class="wr-intro">
 <h2>SnapBuy - Hyperlocal Quick Commerce &amp; eCommerce Solution</h2>
-<p>SnapBuy is a complete multi-store Quick Commerce and eCommerce Solution built to help businesses launch, manage, and scale modern commerce from a single powerful ecosystem.</p>
-<p>Whether you're an entrepreneur, startup, agency, or enterprise launching a hyperlocal eCommerce platform, online retail store, pharmacy, multi-store retail chain, or other commerce business, SnapBuy provides everything you need to launch faster, simplify daily operations, reduce manual work, and deliver exceptional customer experiences.</p>
+<p>SnapBuy is a complete multi-branch Quick Commerce and eCommerce Solution built to help businesses launch, manage, and scale modern commerce from a single powerful ecosystem.</p>
+<p>Whether you're an entrepreneur, startup, agency, or enterprise launching a hyperlocal eCommerce platform, online retail store, pharmacy, multi-branch retail chain, or other commerce business, SnapBuy provides everything you need to launch faster, simplify daily operations, reduce manual work, and deliver exceptional customer experiences.</p>
 <p>Instead of building multiple applications from scratch, SnapBuy gives you a scalable, customisable, and production-ready Quick Commerce Software source code that reduces development time, lowers costs, and helps you grow your commerce business with confidence.</p>
 </section>
 <!-- ============== SECTION 2: DEMO APPS ===================== -->
@@ -951,7 +976,7 @@
 <!-- ============== SECTION 4: TECH STACK ==================== -->
 <section class="wr-section">
 <div class="wr-tech-header">
-<h2 class="wr-tech-title">Tech Stack Behind SnapBuy - Multi-Store eCommerce Software</h2>
+<h2 class="wr-tech-title">Tech Stack Behind SnapBuy - Multi-Branch eCommerce Software</h2>
 <p class="wr-tech-subtitle">SnapBuy is powered by modern technologies to deliver a secure, scalable and high-performance Quick Commerce Software for businesses of every size.</p>
 </div>
 <div class="wr-tech-grid">
@@ -969,7 +994,7 @@
 <section class="wr-section">
 <div class="wr-why-header">
 <h2 class="wr-why-title">Why Choose SnapBuy?</h2>
-<p class="wr-why-subtitle">Discover why businesses choose SnapBuy to launch a modern Quick Commerce Software, streamline operations, and build a scalable multi-store eCommerce business.</p>
+<p class="wr-why-subtitle">Discover why businesses choose SnapBuy to launch a modern Quick Commerce Software, streamline operations, and build a scalable multi-branch eCommerce business.</p>
 </div>
 <div class="wr-why-grid">
 <div class="wr-why-card">
@@ -982,7 +1007,7 @@
 </div>
 <div class="wr-why-card">
 <h3 class="wr-why-card-title">Built to Scale</h3>
-<p class="wr-why-card-text">Expand confidently with multi-store, multi-branch, multi-country, multi-language, and multi-currency support as your business grows.</p>
+<p class="wr-why-card-text">Expand confidently with multi-branch, multi-country, multi-language, and multi-currency support as your business grows.</p>
 </div>
 <div class="wr-why-card">
 <h3 class="wr-why-card-title">Complete Business Control</h3>
@@ -1004,51 +1029,31 @@
 <section class="wr-gallery">
 <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/01-hero.jpg" alt="SnapBuy hero: launch, manage and scale your commerce business with one complete platform. Customer apps, a web store, delivery management and an admin panel for grocery, food, pharmacy and eCommerce, shown on phones">
 <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/02-whats-new-food-module.jpg" alt="New in SnapBuy v1.5.0: the Food Module with add-ons. Single or multiple choice, veg, non-veg and egg marks, free or paid add-ons, quantity per add-on and add-on prices per branch, shown on the customer app">
-<div class="wr-sec-head"><h2 class="wr-sec-title">SnapBuy by the <span>Numbers</span></h2><div class="wr-sec-text">Everything below ships in the box and can be tried in the live demos.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/03-by-the-numbers.jpg" alt="Unlimited branches, 2 sales channels, 3 platforms, 9 payment gateways, 150+ countries, 79 languages, 11 home templates, 12 report types and 25 permission groups">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Loved by <span>Buyers</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/04-reviews.jpg" alt="5.0 star rating from verified buyers on the WRTeam Marketplace, with four buyer reviews">
-<div class="wr-sec-head"><span class="wr-sec-eyebrow">What SnapBuy solves</span><h2 class="wr-sec-title">Stop Juggling Tools. <span>Run It All From One Place.</span></h2><div class="wr-sec-text">Most stores run on WhatsApp orders, spreadsheets and a separate delivery app. SnapBuy replaces all of it with one connected platform.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/05-what-snapbuy-solves-a.jpg" alt="Without SnapBuy: WhatsApp orders, Excel stock sheets, a separate website and delivery app. With SnapBuy: one backend connecting the customer app, branch panel, web store, payments, admin panel and delivery boy app"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/05-what-snapbuy-solves-b.jpg" alt="Six everyday problems and how SnapBuy fixes them: one backend synced in real time, a panel for every branch, live tracking with OTP handover, new cities and countries from the same admin, built-in wallet, referrals, coupons and Spin the Wheel, and one dashboard for orders, stock and payments">
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/06a-one-platform-two-businesses.jpg" alt="Why run two systems when SnapBuy can do both: unified hyperlocal delivery and eCommerce with one app, one dashboard and one team. Save cost, one platform, scale faster, better experience">
-<div class="wr-sec-head"><span class="wr-sec-eyebrow">Side by side</span><h2 class="wr-sec-title">Two Separate Solutions vs <span>SnapBuy</span></h2><div class="wr-sec-text">Everything you avoid by running both businesses on one platform.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/06b-two-systems-vs-snapbuy.jpg" alt="Two separate solutions compared with SnapBuy on cost, management, infrastructure, users, integration, maintenance, total cost, experience and time to market">
-<div class="wr-sec-head"><span class="wr-sec-eyebrow">Build vs buy</span><h2 class="wr-sec-title">Build It Yourself vs <span>SnapBuy</span></h2><div class="wr-sec-text">The same four apps, without the cost and the wait.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/06c-build-vs-buy.jpg" alt="Build it yourself: about $30,000+ and 6 to 12 months. SnapBuy: $19 one-time with 4 apps already built and tested, a live demo, free updates and 6 months of support">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Product <span>Ecosystem</span></h2><div class="wr-sec-text">Every app shares the same data in real time, so there is no duplicate work.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/07-product-ecosystem.jpg" alt="SnapBuy product ecosystem: admin panel, backend API, customer website, customer app, delivery app, real-time services, branch panel and delivery boy panel sharing one backend">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Everything You Need, <span>In One Powerful Platform</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/08-everything-in-one-platform.jpg" alt="Quick Commerce, eCommerce store, grocery and food, one login and one cart, one brand with many branches, multi-country setup, real-time sync, cost effective and future ready">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Built for <span>Every Kind of Store</span></h2><div class="wr-sec-text">One codebase, many businesses. Every store and category tab gets its own homepage, built in the Home Builder.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/09-built-for-every-kind-of-store-a.jpg" alt="Customer app homepages for grocery and daily needs, food and restaurants, pharmacy and wellness, and kids and toys"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/09-built-for-every-kind-of-store-b.jpg" alt="Customer app homepages for beauty and personal care, gadgets, gifting and festive sales"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/09-built-for-every-kind-of-store-c.jpg" alt="Customer app homepages for electronics, home appliances, fashion and accessories, and bags and accessories"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/09-built-for-every-kind-of-store-d.jpg" alt="Quick Commerce and eCommerce website homepages, plus B2B wholesale, gifting and festive, regional chains and multi-city brands">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Ready for <span>Grocery, Food, eCommerce &amp; Pharmacy</span></h2><div class="wr-sec-text">Built-in tools for product categories with special rules.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/10-ready-for-grocery-food-ecommerce-pharmacy.jpg" alt="Prescription upload, veg and non-veg badges, low-stock urgency, back-in-stock alerts, rules per product, branch open and closed, and the Food Module with add-ons and add-on sections">
-<div class="wr-sec-head"><span class="wr-sec-eyebrow">Single vendor · Multi-branch · Not a marketplace</span><h2 class="wr-sec-title">One Brand, <span>Many Branches</span></h2><div class="wr-sec-text">SnapBuy is built for one business that owns every branch and all the stock. It is not a multi-vendor marketplace where outside sellers sign up, list their own products and pay a commission.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/11-one-brand-many-branches.jpg" alt="Your brand with one admin panel and four branches, each with its own stock, prices and opening hours, compared with a multi-vendor marketplace">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Launch Your Own Store <span>Like These</span></h2><div class="wr-sec-text">Famous supermarkets, pharmacies and retail chains sell from their own stores, with quick delivery in minutes and scheduled online orders. SnapBuy gives you the same model, wherever you sell.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/12-launch-your-own-store-like-these.jpg" alt="Logos of 24 well-known single-brand supermarket, pharmacy and retail chains. SnapBuy works in 150+ countries, with 79 languages and 9 payment gateways">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Home<span> Builder</span></h2><div class="wr-sec-text">Drag-and-drop sections, attribute filters, search suggestions, live phone, tablet and web preview, drafts and scheduling.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/13-home-builder.jpg" alt="Home Builder with single and category-wise layouts, 11 templates, 7 section types, drafts and scheduling per zone and channel, shown on a laptop, tablet and phones">
-<div class="wr-sec-head"><h2 class="wr-sec-title">A Page for <span>Every Occasion</span></h2><div class="wr-sec-text">Create pages for festivals, launch offers and campaigns with Home Builder blocks and your own app bar colours, then open them from any slider, banner or image.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/14-a-page-for-every-occasion.gif" alt="Animated customer app: Diwali gifting and home pages and a mobile launch week page, opened from homepage banners. Festival and occasion pages, open from a slider, banner or image, launch offers and campaigns">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Built for <span>B2B Wholesale</span></h2><div class="wr-sec-text">Price slabs turn the same store into a B2B channel for restaurants, retailers and offices that buy in bulk, from the same catalogue, apps and admin panel.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/15-built-for-b2b-wholesale.jpg" alt="Wholesale price slabs, per-branch pricing, business-ready billing with the buyer&#x27;s GSTIN or VAT number and bulk catalogue tools, with a quantity price table">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Every Spin Brings a Surprise</h2><div class="wr-sec-text">Turn every visit into an exciting shopping experience with a fun spin wheel. Offer exciting rewards, discounts and special deals that drive engagement, encourage repeat purchases, and boost sales.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/16-spin-the-wheel.jpg" alt="Spin the Wheel rewards such as free delivery, wallet amount and promo codes, shown on the customer app and website">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Why Choose <span>SnapBuy</span>?</h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/17-why-choose-snapbuy.jpg" alt="Why choose SnapBuy: two businesses on one platform, a complete commerce ecosystem, scale without complexity, simplify every order, marketing and revenue tools, and future-ready technology">
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">SnapBuy by the <span>Numbers</span></h2><div class="wr-sec-text">Everything below ships in the box and can be tried in the live demos.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-03-by-the-numbers.jpg" alt="Unlimited branches, 2 sales channels, 3 platforms, 9 payment gateways, 150+ countries, 79 languages, 11 home templates, 12 report types and 25 permission groups"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Loved by <span>Buyers</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-04-reviews.jpg" alt="5.0 star rating from verified buyers on the WRTeam Marketplace, with four buyer reviews"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><span class="wr-sec-eyebrow">What SnapBuy solves</span><h2 class="wr-sec-title">Stop Juggling Tools. <span>Run It All From One Place.</span></h2><div class="wr-sec-text">Most stores run on WhatsApp orders, spreadsheets and a separate delivery app. SnapBuy replaces all of it with one connected platform.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-05-what-snapbuy-solves-a.jpg" alt="Without SnapBuy: WhatsApp orders, Excel stock sheets, a separate website and delivery app. With SnapBuy: one backend connecting the customer app, branch panel, web store, payments, admin panel and delivery boy app"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-05-what-snapbuy-solves-b.jpg" alt="Six everyday problems and how SnapBuy fixes them: one backend synced in real time, a panel for every branch, live tracking with OTP handover, new cities and countries from the same admin, built-in wallet, referrals, coupons and Spin the Wheel, and one dashboard for orders, stock and payments"></div>
+<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/06a-one-platform-two-businesses-v2.jpg" alt="Why run two systems when SnapBuy can do both: unified hyperlocal delivery and eCommerce with one app, one dashboard and one team. Save cost, one platform, scale faster, better experience">
+<div class="wr-sec-card" style="--bg:#eff7f0;--r:5.423"><div class="wr-sec-head"><span class="wr-sec-eyebrow">Side by side</span><h2 class="wr-sec-title">Two Separate Solutions vs <span>SnapBuy</span></h2><div class="wr-sec-text">Everything you avoid by running both businesses on one platform.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-06b-two-systems-vs-snapbuy.jpg" alt="Two separate solutions compared with SnapBuy on cost, management, infrastructure, users, integration, maintenance, total cost, experience and time to market"></div>
+<div class="wr-sec-card" style="--bg:#eff7f0;--r:5.423"><div class="wr-sec-head"><span class="wr-sec-eyebrow">Build vs buy</span><h2 class="wr-sec-title">Build It Yourself vs <span>SnapBuy</span></h2><div class="wr-sec-text">The same four apps, without the cost and the wait.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-06c-build-vs-buy.jpg" alt="Build it yourself: about $30,000+ and 6 to 12 months. SnapBuy: $19 one-time with 4 apps already built and tested, a live demo, free updates and 6 months of support"></div>
+<div class="wr-sec-card" style="--bg:#ffffff;--r:5.423;--bd:1px solid #e4e4e4"><div class="wr-sec-head"><h2 class="wr-sec-title">Product <span>Ecosystem</span></h2><div class="wr-sec-text">Every app shares the same data in real time, so there is no duplicate work.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-07-product-ecosystem.jpg" alt="SnapBuy product ecosystem: admin panel, backend API, customer website, customer app, delivery app, real-time services, branch panel and delivery boy panel sharing one backend"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.435"><div class="wr-sec-head"><h2 class="wr-sec-title">Everything You Need, <span>In One Powerful Platform</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-08-everything-in-one-platform.jpg" alt="Quick Commerce, eCommerce store, grocery and food, one login and one cart, one brand with many branches, multi-country setup, real-time sync, cost effective and future ready"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Built for <span>Every Kind of Store</span></h2><div class="wr-sec-text">One codebase, many businesses. Every store and category tab gets its own homepage, built in the Home Builder.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-09-built-for-every-kind-of-store-a.jpg" alt="Customer app homepages for grocery and daily needs, food and restaurants, pharmacy and wellness, and kids and toys"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-09-built-for-every-kind-of-store-b.jpg" alt="Customer app homepages for beauty and personal care, gadgets, gifting and festive sales"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-09-built-for-every-kind-of-store-c.jpg" alt="Customer app homepages for electronics, home appliances, fashion and accessories, and bags and accessories"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-09-built-for-every-kind-of-store-d.jpg" alt="Quick Commerce and eCommerce website homepages, plus B2B wholesale, gifting and festive, regional chains and multi-city brands"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Ready for <span>Grocery, Food, eCommerce &amp; Pharmacy</span></h2><div class="wr-sec-text">Built-in tools for product categories with special rules.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-10-ready-for-grocery-food-ecommerce-pharmacy.jpg" alt="Prescription upload, veg and non-veg badges, low-stock urgency, back-in-stock alerts, rules per product, branch open and closed, and the Food Module with add-ons and add-on sections"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><span class="wr-sec-eyebrow">Single vendor · Multi-branch · Not a marketplace</span><h2 class="wr-sec-title">One Brand, <span>Many Branches</span></h2><div class="wr-sec-text">SnapBuy is built for one business that owns every branch and all the stock. It is not a multi-vendor marketplace where outside sellers sign up, list their own products and pay a commission.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-11-one-brand-many-branches.jpg" alt="Your brand with one admin panel and four branches, each with its own stock, prices and opening hours, compared with a multi-vendor marketplace"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Launch Your Own Store <span>Like These</span></h2><div class="wr-sec-text">Famous supermarkets, pharmacies and retail chains sell from their own stores, with quick delivery in minutes and scheduled online orders. SnapBuy gives you the same model, wherever you sell.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-12-launch-your-own-store-like-these.jpg" alt="Logos of 24 well-known single-brand supermarket, pharmacy and retail chains. SnapBuy works in 150+ countries, with 79 languages and 9 payment gateways"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Home<span> Builder</span></h2><div class="wr-sec-text">Drag-and-drop sections, attribute filters, search suggestions, live phone, tablet and web preview, drafts and scheduling.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-13-home-builder.jpg" alt="Home Builder with single and category-wise layouts, 11 templates, 7 section types, drafts and scheduling per zone and channel, shown on a laptop, tablet and phones"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">A Page for <span>Every Occasion</span></h2><div class="wr-sec-text">Create pages for festivals, launch offers and campaigns with Home Builder blocks and your own app bar colours, then open them from any slider, banner or image.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-14-a-page-for-every-occasion.gif" alt="Animated customer app: Diwali gifting and home pages and a mobile launch week page, opened from homepage banners. Festival and occasion pages, open from a slider, banner or image, launch offers and campaigns"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Built for <span>B2B Wholesale</span></h2><div class="wr-sec-text">Price slabs turn the same store into a B2B channel for restaurants, retailers and offices that buy in bulk, from the same catalogue, apps and admin panel.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-15-built-for-b2b-wholesale.jpg" alt="Wholesale price slabs, per-branch pricing, business-ready billing with the buyer&#x27;s GSTIN or VAT number and bulk catalogue tools, with a quantity price table"></div>
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:4.338;--bd:1px solid #e4e4e4"><div class="wr-sec-head"><h2 class="wr-sec-title">Every Spin Brings a Surprise</h2><div class="wr-sec-text">Turn every visit into an exciting shopping experience with a fun spin wheel. Offer exciting rewards, discounts and special deals that drive engagement, encourage repeat purchases, and boost sales.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-16-spin-the-wheel.jpg" alt="Spin the Wheel rewards such as free delivery, wallet amount and promo codes, shown on the customer app and website"></div>
+<div class="wr-sec-card" style="--bg:#ecf7ee;--r:3.254"><div class="wr-sec-head"><h2 class="wr-sec-title">Why Choose <span>SnapBuy</span>?</h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-17-why-choose-snapbuy.jpg" alt="Why choose SnapBuy: two businesses on one platform, a complete commerce ecosystem, scale without complexity, simplify every order, marketing and revenue tools, and future-ready technology"></div>
 <a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-a-top.jpg" alt="Smart businesses choose one platform. Choose SnapBuy: one platform and one dashboard for hyperlocal delivery and your online store"></a>
 <div class="wr-img-row"><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-cta-buy"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-b-buy.jpg" alt="Buy Now for $19"></a><a href="https://snapbuy.wrteam.in/#platforms" target="_blank" rel="noopener" class="wr-cta-demo"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-c-demo.jpg" alt="Try Live Demo"></a><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-cta-rest"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-d-rest.jpg" alt=""></a></div>
 <a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-e-bottom.jpg" alt=""></a>
-<div class="wr-sec-head"><h2 class="wr-sec-title">App <span>Order Flow</span></h2><div class="wr-sec-text">Every step of a real customer order, with the features you get on each screen.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/20-customer-order-flow-a.jpg" alt="Customer app order flow, part 1 of 4: welcome screens, sign in, set delivery location and home screen"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/20-customer-order-flow-b.jpg" alt="Customer app order flow, part 2 of 4: browse a category, product details, add to cart and search products"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/20-customer-order-flow-c.jpg" alt="Customer app order flow, part 3 of 4: checkout, saved addresses, pin the location on the map and address applied"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/20-customer-order-flow-d.jpg" alt="Customer app order flow, part 4 of 4: payment method, place order, my orders and order details with the bill summary">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Admin <span>Order Processing</span></h2><div class="wr-sec-text">What happens in the admin panel after the customer places the order, from the orders list to the invoice.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/21-admin-order-processing-a.jpg" alt="Admin order processing, part 1 of 4: all orders in one place and an eCommerce order handled item-wise"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/21-admin-order-processing-b.jpg" alt="Admin order processing, part 2 of 4: new order received and marked as preparing"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/21-admin-order-processing-c.jpg" alt="Admin order processing, part 3 of 4: assign a delivery boy and ready for pickup"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/21-admin-order-processing-d.jpg" alt="Admin order processing, part 4 of 4: delivery receipt and tax invoice">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Delivery Boy <span>App</span></h2><div class="wr-sec-text">The same order in the delivery boy app: pickup, navigation, OTP handover and instant earnings.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/22-delivery-boy-app-flow-a.jpg" alt="Delivery boy app, part 1 of 3: dashboard, my deliveries, order ready for pickup and order timeline"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/22-delivery-boy-app-flow-b.jpg" alt="Delivery boy app, part 2 of 3: navigate to the customer, picked up, out for delivery and verify the delivery OTP"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/22-delivery-boy-app-flow-c.jpg" alt="Delivery boy app, part 3 of 3: earning credited, order delivered and the complete timeline">
-<div class="wr-sec-head"><h2 class="wr-sec-title">After <span>Delivery</span></h2><div class="wr-sec-text">Back in the customer app: the delivered order, invoice and product rating.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/23-after-delivery.jpg" alt="Customer app after delivery: completed orders, delivered order details with invoice download, and rate and review">
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/24-customer-app.jpg" alt="Customer App: a powerful customer app for modern eCommerce with a smooth and engaging shopping experience">
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">App <span>Order Flow</span></h2><div class="wr-sec-text">Every step of a real customer order, with the features you get on each screen.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-20-customer-order-flow-a.jpg" alt="Customer app order flow, part 1 of 4: welcome screens, sign in, set delivery location and home screen"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-20-customer-order-flow-b.jpg" alt="Customer app order flow, part 2 of 4: browse a category, product details, add to cart and search products"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-20-customer-order-flow-c.jpg" alt="Customer app order flow, part 3 of 4: checkout, saved addresses, pin the location on the map and address applied"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-20-customer-order-flow-d.jpg" alt="Customer app order flow, part 4 of 4: payment method, place order, my orders and order details with the bill summary"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Admin <span>Order Processing</span></h2><div class="wr-sec-text">What happens in the admin panel after the customer places the order, from the orders list to the invoice.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-21-admin-order-processing-a.jpg" alt="Admin order processing, part 1 of 4: all orders in one place and an eCommerce order handled item-wise"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-21-admin-order-processing-b.jpg" alt="Admin order processing, part 2 of 4: new order received and marked as preparing"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-21-admin-order-processing-c.jpg" alt="Admin order processing, part 3 of 4: assign a delivery boy and ready for pickup"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-21-admin-order-processing-d.jpg" alt="Admin order processing, part 4 of 4: delivery receipt and tax invoice"></div>
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Delivery Boy <span>App</span></h2><div class="wr-sec-text">The same order in the delivery boy app: pickup, navigation, OTP handover and instant earnings.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-22-delivery-boy-app-flow-a.jpg" alt="Delivery boy app, part 1 of 3: dashboard, my deliveries, order ready for pickup and order timeline"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-22-delivery-boy-app-flow-b.jpg" alt="Delivery boy app, part 2 of 3: navigate to the customer, picked up, out for delivery and verify the delivery OTP"> <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-22-delivery-boy-app-flow-c.jpg" alt="Delivery boy app, part 3 of 3: earning credited, order delivered and the complete timeline"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">After <span>Delivery</span></h2><div class="wr-sec-text">Back in the customer app: the delivered order, invoice and product rating.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-23-after-delivery.jpg" alt="Customer app after delivery: completed orders, delivered order details with invoice download, and rate and review"></div>
+<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/24-customer-app-v2.jpg" alt="Customer App: a powerful customer app for modern eCommerce with a smooth and engaging shopping experience">
 <div class="wr-feature">
 <h3 class="wr-feature-title">Quick &amp; eCommerce Shopping, One Synced Cart</h3>
 <p class="wr-feature-text">Customers switch between Quick Commerce for delivery in minutes and eCommerce for scheduled shipping, with one account and a cart that syncs across web and app, even for guests.</p>
@@ -1081,9 +1086,8 @@
 <h3 class="wr-feature-title">Multi-Language &amp; RTL Support</h3>
 <p class="wr-feature-text">Shoppers switch language without restarting the app, including right-to-left languages, with light and dark themes.</p>
 <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/32-multi-language-and-rtl.jpg" alt="79 languages, 5 right-to-left languages and dark mode"></div>
-<div class="wr-sec-head"><h2 class="wr-sec-title">More in the <span>Customer App</span></h2><div class="wr-sec-text">Small details that make shoppers come back, already built.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/33-more-in-the-customer-app.jpg" alt="More in the customer app: easy sign-in, saved addresses, favourites, self-pickup, dark mode, deep links, push notifications, cart reminders, voice search, map pin picker, auto location, delivery ETA, filters, coupons page, courier tracking, chat with voice notes and tablet-ready layouts">
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/34-delivery-boy-app.jpg" alt="Delivery Boy App: a smart delivery app for seamless order management">
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">More in the <span>Customer App</span></h2><div class="wr-sec-text">Small details that make shoppers come back, already built.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-33-more-in-the-customer-app.jpg" alt="More in the customer app: easy sign-in, saved addresses, favourites, self-pickup, dark mode, deep links, push notifications, cart reminders, voice search, map pin picker, auto location, delivery ETA, filters, coupons page, courier tracking, chat with voice notes and tablet-ready layouts"></div>
+<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/34-delivery-boy-app-v2.jpg" alt="Delivery Boy App: a smart delivery app for seamless order management">
 <div class="wr-feature">
 <h3 class="wr-feature-title">Easy Delivery Boy Registration</h3>
 <p class="wr-feature-text">Delivery boys sign up in the app with their details, ID documents and bank account, then wait for your approval.</p>
@@ -1100,11 +1104,9 @@
 <h3 class="wr-feature-title">Delivery Boy Support Chat</h3>
 <p class="wr-feature-text">A dedicated chat between delivery boys and your team, without leaving the app.</p>
 <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/38-delivery-boy-chat.jpg" alt="In-app chat between delivery boys and the support team with order context"></div>
-<div class="wr-sec-head"><h2 class="wr-sec-title">More for <span>Delivery Boys</span></h2><div class="wr-sec-text">Everything your delivery team needs, on the phone and on desktop.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/39-more-for-delivery-boys.jpg" alt="Delivery boy web panel, scan to open orders, online and offline toggle, analytics dashboard, one-tap navigation, call and chat, settlement passbook, salary or commission and cash collection ledger">
-<div class="wr-sec-head"><h2 class="wr-sec-title">A Separate Panel for <span>Every Branch</span></h2><div class="wr-sec-text">Each branch logs in to its own panel and runs its day, while you keep central control.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/40-branch-panel.jpg" alt="Branch panel: own staff and roles, stock and prices per branch, opening hours, preparation time, delivery or pickup, and Quick, eCommerce or both">
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/41-admin-panel.jpg" alt="Admin Panel: a complete admin panel for your commerce business">
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">More for <span>Delivery Boys</span></h2><div class="wr-sec-text">Everything your delivery team needs, on the phone and on desktop.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-39-more-for-delivery-boys.jpg" alt="Delivery boy web panel, scan to open orders, online and offline toggle, analytics dashboard, one-tap navigation, call and chat, settlement passbook, salary or commission and cash collection ledger"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">A Separate Panel for <span>Every Branch</span></h2><div class="wr-sec-text">Each branch logs in to its own panel and runs its day, while you keep central control.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-40-branch-panel.jpg" alt="Branch panel: own staff and roles, stock and prices per branch, opening hours, preparation time, delivery or pickup, and Quick, eCommerce or both"></div>
+<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/41-admin-panel-v2.jpg" alt="Admin Panel: a complete admin panel for your commerce business">
 <div class="wr-feature">
 <h3 class="wr-feature-title">Live Dashboard &amp; Channel Insights</h3>
 <p class="wr-feature-text">Revenue, orders and sales trends in real time, filtered by country, zone and date, with Quick Commerce and eCommerce compared side by side.</p>
@@ -1153,39 +1155,24 @@
 <h3 class="wr-feature-title">Smart Notification Center</h3>
 <p class="wr-feature-text">Push notifications, emails and SMS alerts for orders, offers and account updates, for customers and delivery boys.</p>
 <img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/53-notification-center.jpg" alt="Push, email and SMS notifications from the admin panel"></div>
-<div class="wr-sec-head"><h2 class="wr-sec-title">Orders &amp; <span>Fulfilment</span></h2><div class="wr-sec-text">Tools for every kind of order, from 10-minute delivery to courier shipping.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/54-orders-and-fulfilment.jpg" alt="Item-by-item fulfilment, courier tracking, parcel labels with barcode, invoice designer, self-pickup queue, return pickups, 11 order statuses, smart delivery estimate and custom numbering">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Inventory &amp; <span>Catalogue</span></h2><div class="wr-sec-text">Keep thousands of products accurate across every branch.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/55-inventory-and-catalogue.jpg" alt="Stock console, demand insights, category custom fields, safe bulk update, product drafts, media library, drag-and-drop ordering, ratings moderation and brand and origin details">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Tax, Finance &amp; <span>Reports</span></h2><div class="wr-sec-text">Numbers you can trust in any country.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/56-tax-finance-and-reports.jpg" alt="Tax engine for any country, place-of-supply rules, tax on charges, tax coverage checker, profit and margin, cash-on-delivery control, 12 report types, export anywhere and app vs web usage">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Marketing, Content &amp; Notifications</h2><div class="wr-sec-text">Reach the right people with the right message.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/57-marketing-content-and-notifications.jpg" alt="Bulk email campaigns, targeted push campaigns, 98 editable templates, 80 notification events, personal preferences, Clarity and GA4 analytics, Page Builder, abandoned-cart reminders and popup offers">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Security &amp; Everyday Operations</h2><div class="wr-sec-text">Run a live store with confidence.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/58-security-and-everyday-operations.jpg" alt="Password policy, login audit and lockout, cron and queue monitor, scheduled maintenance, app version control, account deletion, API cost tracking, cookie consent, offline handling, activity log, maintenance and demo modes, command search, setup guide, dark mode and installable PWA">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Accept Payments <span>Anywhere in the World</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/59-payments.jpg" alt="9 online payment gateways: Stripe and PayPal globally, Razorpay, Cashfree, PhonePe and PayU add-on in India, PayTabs in the Middle East, Midtrans in Indonesia and Paystack in Africa, plus wallet and cash on delivery, enabled per country">
-<div class="wr-sec-head"><h2 class="wr-sec-title">SMS Gateways &amp; <span>Sign-in Options</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/60-sms-gateways-and-sign-in.jpg" alt="4 SMS gateways (Twilio, Fast2SMS, 2factor and MSG91) or Firebase OTP, and customer sign-in with phone OTP, phone and password, email, Google and Apple">
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Orders &amp; <span>Fulfilment</span></h2><div class="wr-sec-text">Tools for every kind of order, from 10-minute delivery to courier shipping.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-54-orders-and-fulfilment.jpg" alt="Item-by-item fulfilment, courier tracking, parcel labels with barcode, invoice designer, self-pickup queue, return pickups, 11 order statuses, smart delivery estimate and custom numbering"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Inventory &amp; <span>Catalogue</span></h2><div class="wr-sec-text">Keep thousands of products accurate across every branch.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-55-inventory-and-catalogue.jpg" alt="Stock console, demand insights, category custom fields, safe bulk update, product drafts, media library, drag-and-drop ordering, ratings moderation and brand and origin details"></div>
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Tax, Finance &amp; <span>Reports</span></h2><div class="wr-sec-text">Numbers you can trust in any country.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-56-tax-finance-and-reports.jpg" alt="Tax engine for any country, place-of-supply rules, tax on charges, tax coverage checker, profit and margin, cash-on-delivery control, 12 report types, export anywhere and app vs web usage"></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Marketing, Content &amp; Notifications</h2><div class="wr-sec-text">Reach the right people with the right message.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-57-marketing-content-and-notifications.jpg" alt="Bulk email campaigns, targeted push campaigns, 98 editable templates, 80 notification events, personal preferences, Clarity and GA4 analytics, Page Builder, abandoned-cart reminders and popup offers"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Security &amp; Everyday Operations</h2><div class="wr-sec-text">Run a live store with confidence.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-58-security-and-everyday-operations.jpg" alt="Password policy, login audit and lockout, cron and queue monitor, scheduled maintenance, app version control, account deletion, API cost tracking, cookie consent, offline handling, activity log, maintenance and demo modes, command search, setup guide, dark mode and installable PWA"></div>
+<div class="wr-sec-card" style="--bg:#ffffff;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Accept Payments <span>Anywhere in the World</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-59-payments.jpg" alt="9 online payment gateways: Stripe and PayPal globally, Razorpay, Cashfree, PhonePe and PayU add-on in India, PayTabs in the Middle East, Midtrans in Indonesia and Paystack in Africa, plus wallet and cash on delivery, enabled per country"></div>
+<div class="wr-sec-card" style="--bg:#ffffff;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">SMS Gateways &amp; <span>Sign-in Options</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-60-sms-gateways-and-sign-in.jpg" alt="4 SMS gateways (Twilio, Fast2SMS, 2factor and MSG91) or Firebase OTP, and customer sign-in with phone OTP, phone and password, email, Google and Apple"></div>
 <a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-a-top.jpg" alt="Smart businesses choose one platform. Choose SnapBuy: one platform and one dashboard for hyperlocal delivery and your online store"></a>
 <div class="wr-img-row"><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-cta-buy"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-b-buy.jpg" alt="Buy Now for $19"></a><a href="https://snapbuy.wrteam.in/#platforms" target="_blank" rel="noopener" class="wr-cta-demo"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-c-demo.jpg" alt="Try Live Demo"></a><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-cta-rest"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-d-rest.jpg" alt=""></a></div>
 <a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M16-cta-e-bottom.jpg" alt=""></a>
-<div class="wr-sec-head"><h2 class="wr-sec-title">Built for <span>SEO &amp; Speed</span></h2><div class="wr-sec-text">The web store is ready to rank on Google from day one.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/62-built-for-seo-and-speed.jpg" alt="Self-updating sitemap, Google rich results, hreflang and clean URLs, SEO per page and zone, social share previews, layouts per device, fast by default, two ways to deploy and app install prompt">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Modern, <span>Proven Tech Stack</span></h2><div class="wr-sec-text">Popular frameworks your developers already know, with full source code.</div></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/63-tech-stack.jpg" alt="Laravel 12 and Vue 3 admin, Next.js website, Flutter mobile apps for Android and iOS, Firebase and Google services, full source code with commented code, web installer and one-click updater">
-<div class="wr-sec-head"><h2 class="wr-sec-title">What You Get &amp; <span>What You’ll Need</span></h2><div class="wr-sec-text">Everything in the box on the left. What to have ready before you launch on the right.</div></div>
-<a href="https://wa.me/918200323468" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/64-what-you-get-and-what-you-need.jpg" alt="What you get: full source code for the customer app, delivery boy app, Next.js web store, Laravel admin panel, branch panel and delivery boy panel, documentation and 6 months of support. What you need: a VPS, PHP 8.3 to 8.5, MySQL, SSL, a cron job and queue worker, Firebase, SMTP, a payment gateway, Google Maps or OpenStreetMap, and developer accounts"></a>
-<div class="wr-sec-head"><h2 class="wr-sec-title">Launch in <span>4 Simple Steps</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/65-launch-in-4-steps.jpg" alt="Launch in four simple steps: install, configure, brand and publish">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Choose Your <span>Plan</span></h2><div class="wr-sec-text">Launch it yourself, or let our team set everything up for you.</div></div>
-<a href="https://www.wrteam.in/blog/regular-license-vs-extended-license" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/66-plans-marketplace.jpg" alt="SnapBuy plans on the WRTeam Marketplace: Regular $19, reduced from $99, and Extended $799 with done-for-you setup"></a>
-<div class="wr-sec-head"><h2 class="wr-sec-title">Need Help With Installation?</h2></div>
-<a href="https://wa.me/918200323468" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/67-need-help-with-installation.jpg" alt="We&#x27;ll set up SnapBuy for you: from installation to launch, we handle everything. Let&#x27;s set it up"></a>
-<div class="wr-sec-head"><h2 class="wr-sec-title">Frequently Asked <span>Questions</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/68-faq.jpg" alt="Frequently asked questions: multi-vendor or not, rebranding, Flutter source code, updates, support and hosting">
-<div class="wr-sec-head"><h2 class="wr-sec-title">Help When <span>You Need It</span></h2></div>
-<img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/69-docs-and-support.jpg" alt="Documentation, support and an interactive product tour, with QR codes">
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Built for <span>SEO &amp; Speed</span></h2><div class="wr-sec-text">The web store is ready to rank on Google from day one.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-62-built-for-seo-and-speed.jpg" alt="Self-updating sitemap, Google rich results, hreflang and clean URLs, SEO per page and zone, social share previews, layouts per device, fast by default, two ways to deploy and app install prompt"></div>
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Modern, <span>Proven Tech Stack</span></h2><div class="wr-sec-text">Popular frameworks your developers already know, with full source code.</div></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-63-tech-stack.jpg" alt="Laravel 12 and Vue 3 admin, Next.js website, Flutter mobile apps for Android and iOS, Firebase and Google services, full source code with commented code, web installer and one-click updater"></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">What You Get &amp; <span>What You’ll Need</span></h2><div class="wr-sec-text">Everything in the box on the left. What to have ready before you launch on the right.</div></div><a href="https://wa.me/918200323468" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-64-what-you-get-and-what-you-need.jpg" alt="What you get: full source code for the customer app, delivery boy app, Next.js web store, Laravel admin panel, branch panel and delivery boy panel, documentation and 6 months of support. What you need: a VPS, PHP 8.3 to 8.5, MySQL, SSL, a cron job and queue worker, Firebase, SMTP, a payment gateway, Google Maps or OpenStreetMap, and developer accounts"></a></div>
+<div class="wr-sec-card" style="--bg:#f1f9f2;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Launch in <span>4 Simple Steps</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-65-launch-in-4-steps.jpg" alt="Launch in four simple steps: install, configure, brand and publish"></div>
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Choose Your <span>Plan</span></h2><div class="wr-sec-text">Launch it yourself, or let our team set everything up for you.</div></div><a href="https://www.wrteam.in/blog/regular-license-vs-extended-license" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-66-plans-marketplace.jpg" alt="SnapBuy plans on the WRTeam Marketplace: Regular $19, reduced from $99, and Extended $799 with done-for-you setup"></a></div>
+<div class="wr-sec-card" style="--bg:#ecf7ee;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Need Help With Installation?</h2></div><a href="https://wa.me/918200323468" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-67-need-help-with-installation.jpg" alt="We&#x27;ll set up SnapBuy for you: from installation to launch, we handle everything. Let&#x27;s set it up"></a></div>
+<div class="wr-sec-card" style="--bg:#f1f6fe;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Frequently Asked <span>Questions</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-68-faq.jpg" alt="Frequently asked questions: multi-vendor or not, rebranding, Flutter source code, updates, support and hosting"></div>
+<div class="wr-sec-card" style="--bg:#f6f6f6;--r:5.423"><div class="wr-sec-head"><h2 class="wr-sec-title">Help When <span>You Need It</span></h2></div><img src="https://wrteamjignesh.github.io/snapbuy-assets/v2/mp-69-docs-and-support.jpg" alt="Documentation, support and an interactive product tour, with QR codes"></div>
 <a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-a-top.jpg" alt="Ready to launch your commerce business? Start today for a one-time $19 and try every app in the live demos first"></a>
 <div class="wr-img-row"><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-fcta-buy"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-b-buy.jpg" alt="Buy Now for $19"></a><a href="https://snapbuy.wrteam.in/#platforms" target="_blank" rel="noopener" class="wr-fcta-demo"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-c-demo.jpg" alt="Try Live Demo"></a><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-fcta-rest"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-d-rest.jpg" alt=""></a></div>
 <div class="wr-img-row"><a href="https://www.marketplace.wrteam.in/cart/snapbuy-hyperlocal-quick-commerce-ecommerce-platform" target="_blank" rel="noopener" class="wr-fcta-qr"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-e-qr-marketplace.jpg" alt="Scan to buy SnapBuy on the WRTeam Marketplace"></a><a href="https://wa.me/918200323468" target="_blank" rel="noopener" class="wr-fcta-wa"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-f-qr-whatsapp.jpg" alt="Scan to chat on WhatsApp: +91 82003 23468"></a><a href="https://wrteam.in" target="_blank" rel="noopener" class="wr-fcta-info"><img src="https://wrteamjignesh.github.io/snapbuy-assets/marketplace/M73-final-cta-g-info.jpg" alt="Contact Jignesh Majethiya, WRTeam: jignesh@wrteam.in, support@wrteam.in, wrteam.in"></a></div>
@@ -1201,9 +1188,9 @@
 </div>
 <div class="wr-revenue-grid">
 <div class="wr-revenue-card">
-<h3 class="wr-revenue-card-title">Product Sales Across Every Store</h3>
+<h3 class="wr-revenue-card-title">Product Sales Across Every Branch</h3>
 <hr class="wr-revenue-card-divider">
-<p class="wr-revenue-card-text">Earn on every order across all your stores and both sales channels. You own the stores and the stock, so you keep the full margin with no marketplace commission.</p>
+<p class="wr-revenue-card-text">Earn on every order across all your branches and both sales channels. You own the branches and the stock, so you keep the full margin with no marketplace commission.</p>
 </div>
 <div class="wr-revenue-card">
 <h3 class="wr-revenue-card-title">Delivery &amp; Service Fees</h3>
@@ -1213,7 +1200,7 @@
 <div class="wr-revenue-card">
 <h3 class="wr-revenue-card-title">B2B Wholesale Orders</h3>
 <hr class="wr-revenue-card-divider">
-<p class="wr-revenue-card-text">Open a bulk-buying channel for restaurants, retailers and offices with quantity price slabs, from the same catalogue, stores and apps.</p>
+<p class="wr-revenue-card-text">Open a bulk-buying channel for restaurants, retailers and offices with quantity price slabs, from the same catalogue, branches and apps.</p>
 </div>
 <div class="wr-revenue-card">
 <h3 class="wr-revenue-card-title">Promotions &amp; Featured Listings</h3>
